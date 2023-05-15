@@ -26,7 +26,7 @@ const App = () => {
   const [results, setResults] = useState([])
 
   const GetMovieData = () => {
-    fetch("http://localhost:8080/api/getall")
+    fetch("https://restapijerojal.azurewebsites.net/api/getall")
       .then((results) => {
         return results.json();
       })
@@ -41,7 +41,7 @@ const App = () => {
 
   const modifyMovie = () => {
     console.log("Query: " + query)
-    fetch("http://localhost:8080/api/modify/" + query, {
+    fetch("https://restapijerojal.azurewebsites.net/api/modify/" + query, {
       method: 'PUT'
     })
       .then((results) => {
